@@ -1,3 +1,5 @@
+import Paragraphes from "./Paragraphes";
+
 const notes = [
 	"Lorem ipsum dolor sit amet",
 	"Consectetur adipiscing elit",
@@ -8,10 +10,8 @@ const notes = [
 	"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 ];
 
-const listNotes = notes.map((note) => (
-	<p className="test-div" key={note}>
-		{note}
-	</p>
+const listNotes = notes.map((note, id) => (
+	<Paragraphes note={note} id={id} key={(id += 1)} />
 ));
 
 function Cartes() {
